@@ -3,6 +3,7 @@ package com.springmvc.controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -23,9 +24,10 @@ public class IndexController {
 			@WebRequestParam("age") String age) {
 		PrintWriter pWriter;
 		try {
+			request.getServletContext();
 			pWriter = response.getWriter();
-			//String result = service.query(name, age);
-			pWriter.write("hello");
+			String result = service.query(name, age);
+			pWriter.write(result);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

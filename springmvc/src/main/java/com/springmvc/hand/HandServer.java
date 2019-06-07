@@ -35,7 +35,7 @@ public class HandServer implements IHandServerInterface {
 
 	private Map<String, Object> getInstanceType(Map<String, Object> beans, Class<?> type) {
 		Map<String, Object> argResolverMap = new HashMap<String, Object>();
-		for (Map.Entry<String, Object> entry : argResolverMap.entrySet()) {
+		for (Map.Entry<String, Object> entry : beans.entrySet()) {
 			Class<?>[] infsClass = entry.getValue().getClass().getInterfaces();
 			if (infsClass != null && infsClass.length > 0) {
 				for (Class<?> info : infsClass) {

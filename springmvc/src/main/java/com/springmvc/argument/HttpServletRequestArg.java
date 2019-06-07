@@ -18,7 +18,7 @@ public class HttpServletRequestArg implements ArgumentResolver{
 	public Object argumentResolver(HttpServletRequest request, HttpServletResponse response, Class<?> type, int index,
 			Method method) {
 		// TODO Auto-generated method stub
-		return null;
+		return request;
 	}
 
 }
