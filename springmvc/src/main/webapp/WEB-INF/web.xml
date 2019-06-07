@@ -4,6 +4,13 @@
 
 <web-app>
   <display-name>Spring Web Application</display-name>
+  <listener>
+  <listener-class>com.springmvc.listener.WebListener</listener-class>
+ </listener>
+ <listener>
+  <listener-class>com.springmvc.listener.RequestListener</listener-class>
+  </listener>
+  
   <servlet>
   <servlet-name>DispatcherServlet</servlet-name>
   <servlet-class>com.springmvc.servlet.DispatcherServlet</servlet-class>

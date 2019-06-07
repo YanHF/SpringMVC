@@ -31,6 +31,7 @@ public class DispatcherServlet extends HttpServlet {
 
 	@Override
 	public void init() throws ServletException {
+		System.out.println("DispatcherServlet init");
 		// 先扫描需要被实例化的类
 		doScanPackage("com.springmvc");
 		for (String string : classname) {
